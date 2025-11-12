@@ -771,7 +771,367 @@
 
 
                                                                     # 35
-class Mijoz:
-    def __init__(self, ism , familiya):
-        self.ism = ism
-        self.familiya = familiya
+# class Mijoz:
+#     def __init__(self, ism , familiya , balans):
+#         self.ism = ism
+#         self.familiya = familiya
+#         self.balans = balans
+#     def malumot(self):
+#         return f'{self.familiya} {self.ism} , balansida {self.balans}$ miqdorida pul bor'
+    
+# class Bank:
+#     def __init__(self , nomi , yili , mijozlar_soni):
+#         self.nomi = nomi
+#         self.yili = yili
+#         self.mijozlar_soni = mijozlar_soni
+#         self.royhat = []
+#     def bank_haqida(self):
+#         return f'\t{self.nomi} , {self.yili}dan beri ishlab kelmoqda , shu kungacha {self.mijozlar_soni}mln dan ortiq mijoz bu bankdan foydanangan.'
+#     def add_mijoz(self , ism , familiya , balans):
+#         mijoz = Mijoz(ism , familiya , balans)
+#         self.royhat.append(mijoz)
+#     def del_mijoz(self , ism , familiya , balans ):
+#         return f'\t\tBankdagi ishini yakunlagan mijozlar:\n{ism} {familiya}  , balansida {balans}$ miqdorida pul bor.'
+
+#     def info(self):
+#         klient = '\n'.join([i.malumot() for i in self.royhat])
+#         return f'\t\t{self.nomi} dan hozirda foydalanyotgan mijozlar \n{klient}\n'
+    
+# bank1 = Bank('Agrobank' , 1977 , 30)
+# bank1.add_mijoz('Ali' , 'Aliyev' , 430)
+# bank1.add_mijoz('Vali',  'Valiyev' , 810)
+
+# print(bank1.info())
+# print(bank1.del_mijoz('Ali' , 'Aliyev' , 430))
+# print(bank1.bank_haqida())
+
+                                # 36
+
+# class Mijoz:
+#     def __init__(self , ism , familiya ,  balans):
+#         self.ism = ism
+#         self.familiya = familiya
+#         self.balans = balans
+#     def info(self):
+#         return f'{self.familiya} {self.ism} , balansida {self.balans}$ pul bor'
+    
+# mijoz1 = Mijoz('Ali' , 'Aliev' , 270)
+# print(mijoz1.info())
+
+
+
+                                                                    # 37
+# class Fan:
+#     def __init__(self , nomi):
+#         self.nomi= nomi
+#     def malumot(self):
+#         return f'{self.nomi}'
+
+# class Sinf:
+#     def __init__(self , sinf):
+#         self.sinf = sinf
+#         self.royhat = []
+#     def add_fan(self , nomi):
+#         fan = Fan(nomi)
+#         self.royhat.append(fan)
+#     def info(self):
+#         clas = '\n'.join([i.malumot() for i in self.royhat]) 
+#         return f'{self.sinf} sinfidagi fanlar royhati: \n{clas}\n'
+    
+# sinf1 = Sinf('8-B')
+# sinf1.add_fan('Algebra')
+# sinf1.add_fan('Fizika')
+# print(sinf1.info())
+
+
+                                                                        # 38
+# class Fan:
+#     def __init__(self , nom , oqituvchi):
+#         self.nom = nom
+#         self.oqituvchi = oqituvchi
+#     def info(self):
+#         return f'{self.nom} fanidan {self.oqituvchi} dars beradi'
+
+# fan1 = Fan('Dasturlash' , 'Xusainov Mirzabek')
+# print(fan1.info())
+
+
+                                                                            # 39
+# class Talaba:
+#     def __init__(self , ism , familiya , kurs):
+#         self.ism = ism
+#         self.familiya = familiya
+#         self.kurs = kurs
+#     def talaba_malumot(self):
+#         return f'{self.familiya} {self.ism} , {self.kurs} kursda oqiydi'
+    
+# class Oqituvchi:
+#     def __init__(self , ismi , familiyasi , fan):
+#         self.ismi = ismi
+#         self.familiyasi = familiyasi
+#         self.fan = fan
+#     def oqituvchi_malumot(self):
+#         return f'{self.familiyasi} {self.ismi} , {self.fan} fanidan dars beradi'
+    
+# class Universitet:
+#     def __init__(self , nomi):
+#         self.nomi = nomi
+#         self.talaba_royhat = []
+#         self.oqituvchi_royhat = []
+#         self.oqituvchilar_soni = 0
+#     def add_student(self , ism , familiya , kurs):
+#         talaba = Talaba(ism , familiya , kurs)
+#         self.talaba_royhat.append(talaba)
+#     def add_teacher(self , ismi , familiyasi , fan):
+#         oqituvchi = Oqituvchi(ismi , familiyasi , fan)
+#         self.oqituvchi_royhat.append(oqituvchi)
+#         self.oqituvchilar_soni +=1
+#     def talaba_info(self):
+#         student = "\n".join([i.talaba_malumot() for i in self.talaba_royhat])
+#         return f'{self.nomi} nomli universitetda talim oladigan talabalar: \n{student}\n'
+#     def teacher_info(self):
+#         teacher = '\n'.join([n.oqituvchi_malumot() for n in self.oqituvchi_royhat])
+#         return f'{self.nomi} nomli universitetda {self.oqituvchilar_soni}ta oqituvchi talim beradi va ular: \n{teacher}\n'
+    
+# univer1 = Universitet('UrDU')
+# univer1.add_teacher('Ali' , 'Aliyev' , 'Iqsodiyot')
+# univer1.add_student('Vali' , 'Valiyev' , 1)
+# print(univer1.teacher_info())
+# print(univer1.talaba_info())
+
+
+
+                                                                                # 40
+# class Mijoz:
+#     def __init__(self , ismi):
+#         self.ismi = ismi
+#     def mijoz_malumot(self):
+#         return f'{self.ismi}'
+# class Maxsulot:
+#     def __init__(self , nomi , narxi):
+#         self.nomi = nomi
+#         self.narxi = narxi
+#     def maxsulot_malumot(self):
+#         return f'{self.nomi} , narxi {self.narxi}so\'m'
+
+# class Dokon:
+#     def __init__(self , dokon_nomi):
+#         self.dokon_nomi = dokon_nomi
+#         self.mijoz_royhat =  []
+#         self.maxsulot_royhat = []
+#     def add_product(self , nomi , narxi ):
+#         maxsulot = Maxsulot(nomi , narxi)
+#         self.maxsulot_royhat.append(maxsulot)
+#     def add_mijoz(self , ismi):
+#         mijoz = Mijoz(ismi)
+#         self.mijoz_royhat.append(mijoz)
+#     def maxsulot_info(self):
+#         product = "\n".join([i.maxsulot_malumot() for i in self.maxsulot_royhat])
+#         return f'{self.dokon_nomi} nomli dokondagi maxsulotlar: \n{product}\n'
+#     def mijoz_info(self):
+#         odam = ''.join([n.mijoz_malumot() for n in self.mijoz_royhat])
+#         return f'{self.dokon_nomi} nomli dokondagi mijozlar: \n{odam}\n'
+
+# dokon1 = Dokon('Rustam aga')
+# dokon1.add_product('Sut' , 14000)
+# dokon1.add_mijoz('Ali')
+# print(dokon1.maxsulot_info())
+# print(dokon1.mijoz_info())
+
+
+                                                            # 41
+# class Spektakl:
+#     def __init__(self , nom , muallif , davomiylik):
+#         self.nom = nom
+#         self.muallif = muallif
+#         self.davomiylik = davomiylik
+#     def malumot(self):
+#         return f"'{self.nom}' , muallifi {self.muallif} , {self.davomiylik} davom qiladi"
+    
+# class Teatr:
+#     def __init__(self , teatr_nomi):
+#         self.teatr_nomi = teatr_nomi
+#         self.royhat = []
+#         self.soni = 0
+#     def add_spektakl(self , nom , muallif , davomiylik):
+#         spektakl = Spektakl(nom , muallif , davomiylik)
+#         self.royhat.append(spektakl)
+#         self.soni += 1
+#     def info(self):
+#         chiqar = '\n'.join([i.malumot() for i in self.royhat])
+#         return f'{self.teatr_nomi} teatrdagi spektakllar {self.soni}ta va ular: \n{chiqar}\n'
+
+# teatr1 = Teatr('Jamshid')
+# teatr1.add_spektakl('Layli va Majnun' , 'Salim' , 1.25)
+# print(teatr1.info())
+
+
+                                                                                    # 42
+# class Spektakl:
+#     def __init__(self , nom , muallif , davomiylik):
+#         self.nom = nom
+#         self.muallif = muallif
+#         self.davomiylik = davomiylik
+#     def malumot(self):
+#         return f"'{self.nom}' , muallifi {self.muallif} , {self.davomiylik} davom qiladi"
+    
+# class Spektakl_qosh:
+#     def __init__(self ):
+#         self.royhat = []
+#     def add_spektakl(self , nom , muallif , davomiylik):
+#         spektakl = Spektakl(nom , muallif , davomiylik)
+#         self.royhat.append(spektakl)
+#     def info(self):
+#         chiqar = '\n'.join([i.malumot() for i in self.royhat])
+#         return f'Spektakllar: \n{chiqar}\n'
+
+# teatr1 = Spektakl_qosh()
+# teatr1.add_spektakl('Layli va Majnun' , 'Salim' , 1.25)
+# print(teatr1.info())                                                                                    
+
+
+                                                        # 43
+# class Uy:
+#     def __init__(self , nomi , raqami):
+#         self.nomi = nomi
+#         self.raqami = raqami
+#     def malumot(self):
+#         return f"'{self.nomi}' kochasi {self.raqami}-uy"
+
+# class Qishloq:
+#     def __init__(self , qishloq_nomi):
+#         self.qishloq_nomi = qishloq_nomi
+#         self.royhat = []
+#     def add_home(self, nomi , raqami):
+#         uy = Uy(nomi ,  raqami)
+#         self.royhat.append(uy)
+#     def info(self):
+#         chiqar = "\n".join([i.malumot() for i in self.royhat])
+#         return  f'{self.qishloq_nomi} qishloqidagi uylar: \n{chiqar}\n'
+    
+# qishloq1 = Qishloq('Shexlar')
+# qishloq1.add_home('Xoji bobo' , 66)
+# qishloq1.add_home('Xoji bobo' , 67)
+# print(qishloq1.info())
+
+
+                                                                                      # 44
+# class Bank_hisob:
+#     def __init__(self , balans):
+#         self.balans = balans
+#     def pul_qosh(self , pul_miqdori):
+#         self.pul_miqdori = pul_miqdori
+#         self.balans += self.pul_miqdori
+#         return f'Sizning balansizngizga {self.pul_miqdori}$ pul qoshildi va sizning balansingiz {self.balans}$ pul bor'
+#     def pul_ol(self, qiymati):
+#         self.qiymati = qiymati
+#         if self.qiymati > self.balans:
+#             return 'Balansingiz hisobi salbiy'
+#         else:
+#             self.balans -= self.qiymati  
+#         return f'Sizning balansingizdan {self.qiymati}$ pul olindi va sizning balansingizda {self.balans}$ pul qoldi'
+#     def malumot(self):
+#         return f'Sizning balansingizda {self.balans}$ pul bor'
+    
+# hisob1 = Bank_hisob(200)
+# print(hisob1.malumot())
+# print(hisob1.pul_qosh(150))
+# print(hisob1.malumot())
+    
+    
+
+
+                                                                                    # 45
+# class Kitob:
+#     def __init__(self , nomi , muallif):
+#         self.nomi  = nomi
+#         self.muallif = muallif
+#     def malumot(self):
+#         return f'{self.nomi} , muallif {self.muallif}'
+
+# class Dokon:
+#     def __init__(self , dokon_nomi):
+#         self.dokom_nomi = dokon_nomi
+#         self.royhat = []
+#     def add_book(self , nomi , muallif):
+#         kitob = Kitob(nomi , muallif)
+#         self.royhat.append(kitob)
+#     def info(self):
+#         book = "\n".join([i.malumot() for i in self.royhat])
+#         return f'{self.dokom_nomi} dokonidagi kitoblar: \n{book}\n'
+
+# dokon1 = Dokon('Knijniy')
+# dokon1.add_book('Stiv Jobs' , 'Stiv Jobs')
+# print(dokon1.info())
+
+
+
+                                                                            # 48
+# class Oquvchi:
+#     def __init__(self , ism , familiya , sinfi):
+#         self.ism = ism
+#         self.familiya = familiya
+#         self.sinfi = sinfi
+#     def talaba_malumot(self):
+#         return f'{self.familiya} {self.ism} , {self.sinfi} sinfda oqiydi'
+    
+# class Oqituvchi:
+#     def __init__(self , ismi , familiyasi , fan):
+#         self.ismi = ismi
+#         self.familiyasi = familiyasi
+#         self.fan = fan
+#     def oqituvchi_malumot(self):
+#         return f'{self.familiyasi} {self.ismi} , {self.fan} fanidan dars beradi'
+    
+# class Maktab:
+#     def __init__(self , nomi):
+#         self.nomi = nomi
+#         self.talaba_royhat = []
+#         self.oqituvchi_royhat = []
+#         self.oqituvchilar_soni = 0
+#     def add_student(self , ism , familiya , sinfi):
+#         oquvchi = Oquvchi(ism , familiya , sinfi)
+#         self.talaba_royhat.append(oquvchi)
+#     def add_teacher(self , ismi , familiyasi , fan):
+#         oqituvchi = Oqituvchi(ismi , familiyasi , fan)
+#         self.oqituvchi_royhat.append(oqituvchi)
+#         self.oqituvchilar_soni +=1
+#     def talaba_info(self):
+#         student = "\n".join([i.talaba_malumot() for i in self.talaba_royhat])
+#         return f'{self.nomi} nomli maktabda talim oladigan oquvchilar: \n{student}\n'
+#     def teacher_info(self):
+#         teacher = '\n'.join([n.oqituvchi_malumot() for n in self.oqituvchi_royhat])
+#         return f'{self.nomi} nomli maktabda {self.oqituvchilar_soni}ta oqituvchi talim beradi va ular: \n{teacher}\n'
+    
+# maktab1 = Maktab('Sizov')
+# maktab1.add_teacher('Ali' , 'Aliyev' , 'Algebra')
+# maktab1.add_student('Vali' , 'Valiyev' , 1)
+# print(maktab1.teacher_info())
+# print(maktab1.talaba_info())
+
+
+                                                                # 49
+# class Shartnoma:
+#     def __init__(self , qayer):
+#         self.qayer = qayer
+#     def malumot(self):
+#         return f'{self.qayer} davlati bilan' 
+    
+# class Firma:
+#     def __init__(self, nomi):
+#         self.nomi = nomi
+#         self.royhat = []
+#     def add_contract(self , qayer):
+#         shartnoma = Shartnoma(qayer)
+#         self.royhat.append(shartnoma)
+#     def get_info(self):
+#         contract = "\n".join([i.malumot() for i in self.royhat])
+#         return f'{self.nomi} firma hsartnomalari: \n{contract}\n'
+        
+# firma1 = Firma('Renessans')
+# firma1.add_contract('Germaniya')
+# firma1.add_contract('Yaponiya')
+# print(firma1.get_info())
+
+
+  
