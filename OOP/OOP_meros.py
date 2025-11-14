@@ -329,12 +329,12 @@
 
 
 
-                                            # 15
+#                                             15
 # class Kompaniya:
 #     def __init__(self , nomi , kasbi):
 #         self.nomi = nomi
 #         self.kasbi = kasbi
-#     def malumot(self):
+# #     def malumot(self):
 #         return f'{self.nomi}'
 
 # class Ishchi(Kompaniya):
@@ -372,16 +372,145 @@
 
 # yolvchi
                                                                                                 # 17
-class Transport:
-        def __init__(self, nomi , turi , sonli):
-                self.nomi = nomi
-                self.turi = turi
-                self.sonli = sonli
+# class Transport:
+#         def __init__(self, nomi , turi , sonli):
+#                 self.nomi = nomi
+#                 self.turi = turi
+#                 self.sonli = sonli
+#         def malumot(self):
+#                 return f'{self.turi}\n{self.nomi} kompamiyasiga tegishli , {self.sonli} sonli {self.turi}.'
+# class Poyezd(Transport):
+#         def __init__(self, nomi, turi , sonli , uchun , vagon):
+#                 super().__init__(nomi, turi , sonli)
+#                 self.uchun = uchun
+#                 self.vagon = vagon
+#         def yonalish(self , qayerdan , qayerga ):
+#                 self.qayerdan = qayerdan
+#                 self.qayerga = qayerga
+#         def bilet(self , narxi):
+#                 self.narxi = narxi
+#         def get_poezd(self):
+#                 return f'{self.malumot()}. Bu poyezd {self.uchun} uchun , {self.vagon}ta vagondan iborat va bu poyezdning yonalishi {self.qayerdan}-{self.qayerga}. Chipta narxi {self.bilet}so\'m.'
+        
+# class Avtobus(Transport):
+#         def __init__(self, nomi, turi, sonli , sigim ,yili):
+#                 super().__init__(nomi, turi, sonli)
+#                 self.sigim = sigim
+#                 self.yili = yili
+#         def chipta(self , narx):
+#                 self.narx = narx
+#         def yonalish(self , qayerdan , qayerga ):
+#                 self.qayerdan = qayerdan
+#                 self.qayerga = qayerga
+#         def get_avtobus(self):
+#                 return f'{self.malumot()}. Bu avtobus {self.yili}yil ushlab chiqaarlingan bolib oziga {self.sigim} nafar odam sigdira oladi va bu avtobusning yonalishi {self.qayerdan}-{self.qayerga}. Chipta narxi {self.chipta}so\'m.' 
+
+# transport1 = Poyezd('O\'zTY' , 'Poyezd' , 'W418' , 'yolivchi tashish' , 37)
+# transport1.yonalish('Toshkent' , 'Xorazm')
+# transport1.bilet(362000)
+# print(transport1.get_poezd())
+
+
+
+                                                                        # 18
+# class Shaxs:
+#         def __init__(self , ism , familiya , yil):
+#                 self.ism = ism
+#                 self.familiya = familiya
+#                 self.yil = yil
+#         def malumot(self):
+#                 return f'{self.familiya} {self.ism} , {self.yil}yil tugilgan.'
+        
+# class Talaba(Shaxs):
+#         def __init__(self, ism, familiya, yil , univer , kurs):
+#                 super().__init__(ism, familiya, yil)
+#                 self.univer = univer
+#                 self.kurs = kurs
+#         def fakultet(self , nomi):
+#                 self.nomi = nomi
+#         def yangilash(self):
+#                 self.kursi +=1
+#         def end_univer(self):
+#                 if self.kursi == 4:
+#                         return 'Bitiruvchi talaba'
+#         def get_student(self):
+#                 return f'{self.malumot()} {self.univer} universitetida {self.nomi} fakultetidan talim oladi , {self.kurs}-kurs'
+
+# class Oqituvchi(Shaxs):
+#         def __init__(self, ism, familiya, yil , maktab ):
+#                 super().__init__(ism, familiya, yil)
+#                 self.maktab = maktab
+#         def fan(self, fan_nomi):
+#                 self.fan_nomi = fan_nomi
+#         def tajriba(self , opit):
+#                 self.opit = opit
+#         def yangilash(self):
+#                 self.opit +=1
+#         def get_teacher(self):
+#                 return f'{self.malumot()} {self.maktab} maktabida {self.fan_nomi} fanidan talim beradi , {self.opit}yil tajribaga ega'
+
+# shaxs1 = Oqituvchi('ALi' , 'Aliyev' , '1996' , '2-Sizov')
+# shaxs1.fan('Makematika')
+# shaxs1.tajriba(7)
+# shaxs1.yangilash()
+# print(shaxs1.get_teacher())
+
+
+                                                                                        # 19
+# class Maxsulot:
+#         def __init__(self , nomi , narxi):
+#                         self.nomi = nomi
+#                         self.narxi = narxi
+#                 def malumot(self):
+#                         return f'{self.nomi} , narxi {self.narxi}so\'m'
+                
+#         class Meva(Maxsulot):
+#                 def __init__(self, nomi, narxi , turi):
+#                         super().__init__(nomi, narxi)
+#                         self.turi = turi
+#                 def muddat(self , muddat):
+#                         self.muddat = muddat
+#                 def davlat(self , qayer):
+#                         self.qayer = qayer
+#                 def get_meva(self):
+#                         return f'Maxsulot: {self.nomi}\n{self.turi} , narxi{self.narxi}so\'m. Dokonga {self.muddat}yil {self.qayer} shahridan kelgan.'
+
+#         maxsulot1 = Meva('Meva' , 30000 , 'Marakuya')
+#         maxsulot1.muddat('10.27.2025') 
+#         maxsulot1.davlat('Avstraliya')
+#         print(maxsulot1.get_meva())
+
+
+class Bino:
+        def __init__(self  , manzil , narx):
+                self.manzil = manzil
+                self.narx = narx
         def malumot(self):
-                return f'{self.turi} , {self.nomi} kompamiyasiga tegishli , {self.sonli} sonli poyezd'
-class Poyezd(Transport):
-        def __init__(self, nomi, turi , uchun , sonli  , vagon):
-                super().__init__(nomi, turi , sonli)
-                self.uchun = uchun
-                self.vagon = vagon
-        def 
+                return f'{self.manzil} , narxi {self.narx}$'
+        
+class Uy(Bino):
+        def __init__(self, manzil, kv , narx ,   honalar):
+                super().__init__(manzil, narx)
+                self.honalar = honalar
+                self.kv=  kv
+        def remont(self , remont):
+                self.remont = remont
+        def xaq(self , turi, uzunlik , balandlik ,  kenglik , kv_narx):
+                self.turi = turi
+                self.uzunlik = uzunlik
+                self.balandlik = balandlik
+                self.kenglik =  kenglik
+                self.kv_narx = kv_narx
+        def get_xaq(self):
+                return f'Xizmat turi: {self.turi}\nXona uzunliki {self.uzunlik}m\nXona kengliki {self.kenglik}m\nXona balantliki: {self.balandlik}m\n1kv narx : {self.narx}$\nJami usta xaqqi: {(self.uzunlik * self.kenglik * self.balandlik) * self.kv_narx}$'
+        def xonalar_maydoni(self , xonalar_maydoni):
+                self.xonalar_maydoni = xonalar_maydoni
+        def get_info(self):
+                return f'Manzil: {self.manzil} {self.kv}kv\nNarxi: {self.narx}$\nHonalar soni: {self.honalar}ta\nRemont: {self.remont}.\nXonalar maydoni {self.xonalar_maydoni}m²'
+        
+uy1 = Uy('3/8A' , '24' , 30000 , 4)
+uy1.remont('Evro')
+uy1.xaq('Pol taxta' , 8 , 1 , 5 , 15000)
+uy1.xonalar_maydoni(20)
+print(uy1.get_info())
+        
