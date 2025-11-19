@@ -481,36 +481,413 @@
 #         print(maxsulot1.get_meva())
 
 
-class Bino:
-        def __init__(self  , manzil , narx):
-                self.manzil = manzil
-                self.narx = narx
-        def malumot(self):
-                return f'{self.manzil} , narxi {self.narx}$'
+# class Bino:
+#         def __init__(self  , manzil , narx):
+#                 self.manzil = manzil
+#                 self.narx = narx
+#         def malumot(self):
+#                 return f'{self.manzil} , narxi {self.narx}$'
         
-class Uy(Bino):
-        def __init__(self, manzil, kv , narx ,   honalar):
-                super().__init__(manzil, narx)
-                self.honalar = honalar
-                self.kv=  kv
-        def remont(self , remont):
-                self.remont = remont
-        def xaq(self , turi, uzunlik , balandlik ,  kenglik , kv_narx):
-                self.turi = turi
-                self.uzunlik = uzunlik
-                self.balandlik = balandlik
-                self.kenglik =  kenglik
-                self.kv_narx = kv_narx
-        def get_xaq(self):
-                return f'Xizmat turi: {self.turi}\nXona uzunliki {self.uzunlik}m\nXona kengliki {self.kenglik}m\nXona balantliki: {self.balandlik}m\n1kv narx : {self.narx}$\nJami usta xaqqi: {(self.uzunlik * self.kenglik * self.balandlik) * self.kv_narx}$'
-        def xonalar_maydoni(self , xonalar_maydoni):
-                self.xonalar_maydoni = xonalar_maydoni
-        def get_info(self):
-                return f'Manzil: {self.manzil} {self.kv}kv\nNarxi: {self.narx}$\nHonalar soni: {self.honalar}ta\nRemont: {self.remont}.\nXonalar maydoni {self.xonalar_maydoni}m²'
+# class Uy(Bino):
+#         def __init__(self, manzil, kv , narx ,   honalar):
+#                 super().__init__(manzil, narx)
+#                 self.honalar = honalar
+#                 self.kv=  kv
+#         def remont(self , remont):
+#                 self.remont = remont
+#         def xaq(self , turi, uzunlik , balandlik ,  kenglik , kv_narx):
+#                 self.turi = turi
+#                 self.uzunlik = uzunlik
+#                 self.balandlik = balandlik
+#                 self.kenglik =  kenglik
+#                 self.kv_narx = kv_narx
+#         def get_xaq(self):
+#                 return f'Xizmat turi: {self.turi}\nXona uzunliki {self.uzunlik}m\nXona kengliki {self.kenglik}m\nXona balantliki: {self.balandlik}m\n1kv narx : {self.kv_narx}$\nJami usta xaqqi: {(self.uzunlik * self.kenglik * self.balandlik) * self.kv_narx}$'
+#         def xonalar_maydoni(self , xonalar_maydoni):
+#                 self.xonalar_maydoni = xonalar_maydoni
+#         def get_info(self):
+#                 return f'Manzil: {self.manzil} {self.kv}kv\nNarxi: {self.narx}$\nHonalar soni: {self.honalar}ta\nRemont: {self.remont}.\nXonalar maydoni {self.xonalar_maydoni}m²'
         
-uy1 = Uy('3/8A' , '24' , 30000 , 4)
-uy1.remont('Evro')
-uy1.xaq('Pol taxta' , 8 , 1 , 5 , 15000)
-uy1.xonalar_maydoni(20)
-print(uy1.get_info())
+# uy1 = Uy('3/8A' , '24' , 30000 , 4)
+# uy1.remont('Evro')
+# uy1.xaq('Pol taxta' , 8 , 1 , 5 , 2)
+# uy1.xonalar_maydoni(20)
+# print(uy1.get_xaq())
         
+
+                                                                                # 21
+# class Avto:
+#         def __init__(self, model, yil, tezlik):
+#                 self.model = model
+#                 self.yil = yil
+#                 self.tezlik = tezlik
+
+#         def info(self):
+#                 return f"Model: {self.model}\nYil: {self.yil}yil\nTezlik: {self.tezlik}km/h"
+
+
+# class SportAvto(Avto):
+#         def __init__(self, model, yil, tezlik, turi):
+#                 super().__init__(model, yil, tezlik)
+#                 self.turi = turi
+
+#         def get_info(self):
+#                 return f'{self.info()}\nMashina turi: {self.turi}'
+        
+
+# sport = SportAvto("BMW M5", 2023, 330, 'Turbo')
+# print(sport.get_info())
+
+                                                                                # 22
+# class Kitob:
+#         def __init__(self, nomi, muallif, sahifa):
+#                 self.nomi = nomi
+#                 self.muallif = muallif
+#                 self.sahifa = sahifa
+
+#         def malumot(self):
+#                 return f"Nomi: {self.nomi}\nMuallif: {self.muallif}\nSahifa: {self.sahifa}bet"
+
+
+# class ElektronKitob(Kitob):
+#         def __init__(self, nomi, muallif, sahifa_soni, fayl_hajmi, formati):
+#                 super().__init__(nomi, muallif, sahifa_soni) 
+#                 self.fayl_hajmi = fayl_hajmi
+#                 self.formati = formati
+
+#         def info(self):
+#                return f'{self.malumot()}\nFayl hajmi: {self.fayl_hajmi}MB\nKitob formati: {self.formati}'
+        
+
+# kitob = ElektronKitob('Layli va Majnun' , 'Alisher Navoi', 450, 8, "Elektron")
+# print(kitob.info())
+
+
+                                                                                        # 23
+# class Avto:
+#     def __init__(self , brend ,  model , yil ):
+#         self.brend  = brend
+#         self.model = model
+#         self.yil = yil
+
+#     def malumot(self):
+#         return f"{self.brend} {self.model}, {self.yil}yil ishlab chiqarlingan"
+
+# class Elektro_Avto(Avto):
+#     def __init__(self, brend, model, yil , batareya):
+#         super().__init__(brend, model, yil)
+#         self.batareya = batareya
+
+#     def zaryad_qoshish(self, foiz):
+#         self.foiz = foiz
+#         return f"Mashinang zaryadlangandan keyingi zaryadi:{self.batareya + self.foiz}%"
+
+#     def zaryad_foiz(self):
+#         return f"Hozirgi batareya darajasi: {self.batareya}%"
+
+#     def get_info(self):
+#         return f'{self.brend} {self.model}, {self.yil}yil ishlab chiqarlingan , mashinaning zaryadi: {self.batareya}%'
+
+
+# avto1 = Elektro_Avto('BYD' , 'Chempion' , 2024  , 45)
+# print(avto1.get_info())
+# print(avto1.zaryad_qoshish(30))
+
+
+                        # 24
+# class Son:
+#     def __init__(self , a , b):
+#         self.a = a
+#         self.b = b
+
+# class Hisobla(Son):
+#     def __init__(self, a, b):
+#         super().__init__(a, b)
+
+#     def qosh(self):
+#         return f'{self.a} ga {self.b} ni qoshsa {self.a + self.b} boladi'
+    
+#     def ayir(self):
+#         return f'{self.a} dan {self.b} ni ayirsa {self.a - self.b} boladi'
+    
+#     def kopaytir(self):
+#         return f'{self.a} ga {self.b} ga kopaytirsa {self.a * self.b} boladi'
+    
+#     def bol(self):
+#         return f'{self.a} ni {self.b} ga bolsa {self.a / self.b} boladi'
+    
+# son1 = Hisobla(5,4)
+# print(son1.kopaytir())
+
+
+                                                                                    # 25
+# class Hayvon:
+#     def __init__(self, turi):
+#         self.turi = turi
+
+#     def malumot(self):
+#         return f'Hayvon turi: {self.turi}'
+
+# class Qush(Hayvon):
+#     def __init__(self , turi  ,nomi):
+#         super().__init__(turi)
+#         self.nomi = nomi
+
+#     def uchish(self , qanot_uzunligi):
+#         self.qanot_uzunligi = qanot_uzunligi  
+#         return f"{self.nomi} {self.qanot_uzunligi}sm qanot bilan uchmoqda."
+
+#     def tovush(self , tuvush):
+#         self.tuvush = tuvush
+#         return f"{self.nomi} {self.tuvush} tovush chiqarmoqda."
+#     def info(self):
+#         return f'{self.malumot()} {self.nomi}'
+
+
+# hayvon1 = Qush('Qush' , 'Lochin')
+# print(hayvon1.info())
+# print(hayvon1.uchish(45))
+# print(hayvon1.tovush('Lochin ovozi'))
+
+                                                                        # 26
+
+# class Maktab:
+#     def __init__(self, maktab_nomi, manzil , talim):
+#         self.maktab_nomi = maktab_nomi
+#         self.manzil = manzil
+#         self.talim = talim
+#         self.sinflar = []    
+
+#     def sinf_qoshish(self , sinf_nomi):
+#         self.sinf_nomi = sinf_nomi
+#         self.sinflar.append(sinf_nomi)
+#         return f"'{self.sinf_nomi}' {self.maktab_nomi} maktabiga qoshildi."
+
+#     def mk_info(self):
+#         return f"Maktab: '{self.maktab_nomi}'\nTalim: {self.talim}\nManzil: {self.manzil}\nSinflar soni: {len(self.sinflar)}"
+
+
+# class Sinf(Maktab):
+#     def __init__(self, maktab_nomi, manzil , talim):
+#         super().__init__(maktab_nomi, manzil , talim)
+#         self.oquvchilar = []
+#         self.oquvchilar_soni = 0
+#         self.darslar = []
+
+#     def oquvchi_qoshish(self, oquvchi_ismi):
+#         self.oquvchi_ismi = oquvchi_ismi
+#         self.oquvchilar.append(oquvchi_ismi)
+#         self.oquvchilar_soni +=1
+#         return f"{self.sinf_nomi} sinfiga {self.oquvchi_ismi} qoshildi.\n{self.sinf_nomi} sinfidagi oquvchilar soni {self.oquvchilar_soni} va ular {self.oquvchilar}"
+
+#     def dars_qoshish(self, dars_nomi):
+#         self.dars_nomi = dars_nomi
+#         self.darslar.append(dars_nomi)
+#         return f"{self.dars_nomi} fani {self.sinf_nomi}ga qoshildi.\n{self.sinf_nomi} sinfida darslar royhadi {self.darslar}"
+
+#     def class_info(self):
+#         return f"\tSinf haqida malumot\nSinf nomi: {self.sinf_nomi}\nOquvchilar: {self.oquvchilar}\nDarslar: {self.darslar}"
+#     def maktab_info(self):
+#         return f'\tMaktab haqida malumot\n{self.mk_info()}'
+
+# sinf1 = Sinf('2-maktab' , 'Tuproqqala' , 'Orta talim')
+# sinf1.sinf_qoshish('8B')
+# sinf1.oquvchi_qoshish('Ali')
+# sinf1.oquvchi_qoshish('Laylo')
+# sinf1.dars_qoshish('Matematika')
+# sinf1.dars_qoshish('Informatika')
+# print(sinf1.maktab_info())
+# print(sinf1.class_info())
+
+
+            # 27
+# class Avto:
+#     def __init__(self, brend , model, yil , mator , narx):
+#         self.brend = brend
+#         self.model = model
+#         self.yil = yil
+#         self.mator = mator
+#         self.narx = narx
+
+#     def info(self):
+#         return f"{self.brend} {self.model}, mator hajmi {self.mator}L {self.yil}yil ishlab chiqarlingan, narxi {self.narx}$"
+
+
+# class Mercedes(Avto):
+#     def __init__(self, brend , model, yil , mator , narx , rejim):
+#         super().__init__(brend , model, yil , mator , narx)
+#         self.rejim = rejim 
+
+#     def benzin_sarf(self , km_sarf):
+#         self.km_sarf = km_sarf
+#         return f'{self.brend} {self.model} mashinasi 100km uchun {self.km_sarf * 100}l benzin kerak'
+
+#     def mers_info(self):
+#         return  f'{self.info()}\nRejim: {self.rejim}\n'
+
+
+# class Chevrolet(Avto):
+#     def __init__(self, brend , model, yil , mator , narx , rejim):
+#         super().__init__(brend , model, yil, mator , narx)
+#         self.rejim = rejim 
+
+#     def benzin_sarf(self , km_sarf):
+#         self.km_sarf = km_sarf
+#         return f'{self.brend} {self.model} mashinasi 100km uchun {self.km_sarf * 100}l benzin sarf qiladi'
+
+#     def cevrolet_info(self):
+#         return  f'{self.info()}\nRejim: {self.rejim}\n'
+
+# avto1 = Mercedes('Mersedes',  'W124' , 1996 , '4,2' , 14000 , 'Classic')
+# print(avto1.mers_info())
+# print(avto1.benzin_sarf(3))
+
+
+                            # 28
+# class Texnika:
+#     def __init__(self, model, narx):
+#         self.model = model
+#         self.narx = narx
+
+#     def info(self):
+#         return f"Model: {self.model}, Narx: {self.narx}$"
+
+
+# class Printer(Texnika):
+#     def __init__(self, model, narx, qanaqa):
+#         super().__init__(model, narx)
+#         self.qanaqa = qanaqa  
+
+#     def print_qil(self, matn):
+#         self.matn = matn
+#         if self.qanaqa == 'rangli':
+#             return f"Rangli printer '{self.model}' {self.matn}ni chop etmoqda "
+#         else:
+#             return f"Oq-qora printer '{self.model}' {self.matn}ni chop etmoqda "
+#     def pr_info(self):
+#         return f'{self.info()}. {self.qanaqa} printer'
+    
+
+
+# class Skanner(Texnika):
+#     def __init__(self, model, narx, dpi):
+#         super().__init__(model, narx)
+#         self.dpi = dpi
+
+#     def scan_qil(self):
+#         return f"Skanner '{self.model}' {self.dpi} DPI sifatda hujjatni skan qildi."
+#     def sr_info(self):
+#         return f'{self.info()}. {self.dpi}DPI skaner'
+
+# texnika1 = Skanner('R28' , 60 , 9000)
+# print(texnika1.scan_qil())
+# print(texnika1.sr_info())
+
+            # 29
+# class Sportchi:
+    
+#     def __init__(self,familiya , ism, yosh , sport_turi):
+#         self.ism = ism
+#         self.familiya = familiya
+#         self.yosh = yosh
+#         self.sport_turi = sport_turi
+        
+#     def malumot(self):
+#         return f"Sport Turi: {self.sport_turi}\nIsm familiyasi:{self.familiya} {self.ism}\nYosh: {self.yosh}\n"
+
+
+# class Futbolchi(Sportchi): 
+#     def __init__(self,familiya , ism , yosh , sport_turi , pozitsiya , jamoa):
+#         super().__init__(familiya ,ism , yosh, sport_turi)
+#         self.pozitsiya = pozitsiya
+#         self.jamoa = jamoa
+#         self.gollar_soni = 0  
+        
+#     def gol_urish(self):
+#         self.gollar_soni += 1
+#         return f'{self.ism} gol urdi Uning gollari soni: {self.gollar_soni}'
+        
+#     def transfer_bolish(self, yangi_jamoa):
+#         eski_jamoa = self.jamoa
+#         self.yangi_jamoa = yangi_jamoa
+#         return f' {self.familiya} {self.ism} {eski_jamoa} dan {self.yangi_jamoa} ga transfer qilindi.'
+
+#     def info(self):
+#         return f'{self.malumot()}Pozitsiya: {self.pozitsiya}\nJamoa: {self.jamoa}\nGollari: {self.gollar_soni}ta'
+
+
+
+# futbolchi1 = Futbolchi("Robert" ,  'Lewandovski', 36 , 'Futbolchi' , 'Hujumchi', 'Barselona')
+
+# futbolchi1.gol_urish()
+# futbolchi1.gol_urish()
+# futbolchi1.gol_urish()
+# print(futbolchi1.info())
+# print(futbolchi1.transfer_bolish("AS Milan"))
+
+
+
+                # 30
+# class Student:
+#     def __init__(self, ism , familiya , yonalish , kurs):
+#         self.ism = ism
+#         self.familiya = familiya
+#         self.yonalish = yonalish
+#         self.kurs = kurs 
+#     def malumot(self):
+#         return f'{self.familiya} {self.ism} {self.kurs}-kursda {self.yonalish} yonalishida talim oladi.'
+    
+# class Talaba(Student):
+#     def __init__(self, ism, familiya, yonalish, kurs , fan , ball , ):
+#         super().__init__(ism, familiya, yonalish, kurs)
+#         self.fan = fan
+#         self.ball = ball
+#         self.kontrakt = 15000000
+#     def count_ball(self):
+#         if 30<=self.ball>=66:
+#             return f'{self.familiya} {self.ism} ning bahosi qoniqarli'
+#         elif 67<=self.ball>=85:
+#             return f'{self.familiya} {self.ism} ning bahosi yaxshi'
+#         elif 86<=self.ball>=100:
+#             return f'{self.familiya} {self.ism} ning bahosi a\'lo'
+#         elif 0<=self.ball>=29:
+#             return f'{self.familiya} {self.ism} ning bahosi qoniqarsiz'
+#         else:
+#             return f'Xatolik!!!'
+        
+#     def count_gpa(self):
+#         gpa = sum({self.ball}) // len({self.fan})
+#         return f'{self.familiya} {self.ism}ning ortacha ball {gpa}'
+    
+#     def talim_turi(self , talim_turi , stipendiya , qancha_toladi):
+#         if talim_turi.lower() == "grand":
+#             if self.ball >=60:
+#                 return f"{self.familiya} {self.ism} imtihonga kirishiga ruhsat"
+#             else:
+#                 return f"{self.familiya} {self.ism} grandda o'qiydi lekin ball yetmagani sababli imtihonga qo'yilmaydi"
+#         elif talim_turi == "kontrakt":
+#             if stipendiya.lower() == 'stipendiyali':
+#                 if self.kontrakt *60 /100 <= qancha_toladi:
+#                     if self.ball >= 60:
+#                         return f"{self.familiya} {self.ism} imtihonga kirishiga ruhsat"
+#                     else:
+#                         return f"{self.familiya} {self.ism} kontrank pulingiz tolangan lekin balingiz yetmaydi"
+#                 else: 
+#                     return f'{self.familiya} {self.ism} kontrank pulingizni tolang'
+#         else:
+#             return f'Talim turini togri kiriting'
+
+
+# talaba1 = Talaba('Ali' , 'Aliyev' , 'Filologiya' , 2 , 'Matematika' , 55 )
+# print(talaba1.count_ball())
+# print(talaba1.talim_turi('kontrakt' , 'stipendiyali' , 12000000 ))
+
+
+class Avto:
+    def __init__(self , brend , model , yil , narx):
+        self.brend = brend
+        self.model = model
+        self.yil = yil
+        self.narx = narx
+    def info(self):
+        return f'{self.brend} {self.model} , {self.yil}yil , narxi {self.narx}$'
