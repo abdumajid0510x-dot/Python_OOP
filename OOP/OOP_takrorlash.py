@@ -79,44 +79,133 @@
 # bemor1.choose_doktor(doktor1)
 
 
-class Avtomobil:
-    def __init__(self , avto_nomi , avto_narx):
-        self.avto_nomi = avto_nomi
-        self.avto_narx = avto_narx
-        self.mijozlar = []
-    def add_mijoz(self , mijoz_name):
-            self.mijozlar.append(mijoz_name)
-    def narx_hisobla(self):
-        return f'{self.avto_narx / 2}'
-    def mijozlarni_korsatish(self):
-        return self.mijozlar
-    def navbat_mijozlar(self):
-        return len(self.mijozlar)
+# class Avtomobil:
+#     def __init__(self , avto_nomi , avto_narx):
+#         self.avto_nomi = avto_nomi
+#         self.avto_narx = avto_narx
+#         self.mijozlar = []
+#     def add_mijoz(self , mijoz_name):
+#             self.mijozlar.append(mijoz_name)
+#     def narx_hisobla(self):
+#         return f'{self.avto_narx / 2}'
+#     def mijozlarni_korsatish(self):
+#         return self.mijozlar
+#     def navbat_mijozlar(self):
+#         return len(self.mijozlar)
     
-class Avtosalon:
-    def __init__(self , salon_name):
-        self.salon.name = salon_name
-        self.avtolar = []
-    def add_avtomobil(self , avto_name):
-        self.avtolar.append(avto_name)
-    def avtolarni_korsatish(self): 
-        for joylashuv , model in enumerate(self.avtolar):
-            print(f'{joylashuv}.{model}')
+# class Avtosalon:
+#     def __init__(self , salon_name):
+#         self.salon_name = salon_name
+#         self.avtolar = []
+#     def add_avtomobil(self , avto_name):
+#         self.avtolar.append(avto_name)
+#     def avtolarni_korsatish(self): 
+#         for joylashuv , model in enumerate(self.avtolar):
+#             print(f'{joylashuv}.{model}')
 
-class Haridor:
-    def __init__(self, mijoz_ism):
-        self.mijoz_ism = mijoz_ism
-    def avto_tanlash(self , mashina):
-        mashina.add_mijoz(self.mijoz_ism)
-        print(f'{self.mijoz_ism} {mashina.avto_nomi} ga {self.narx_hisobla()}som tolab navbaga yozildi')
-        print(f'Navbatda: {mashina.count_bemor()} nafar haridor bor.')
+# class Haridor:
+#     def __init__(self, mijoz_ism):
+#         self.mijoz_ism = mijoz_ism
+#     def avto_tanlash(self , mashina):
+#         mashina.add_mijoz(self.mijoz_ism)
+#         print(f'{self.mijoz_ism} {mashina.avto_nomi} ga boshlangich tolov {mashina.narx_hisobla()}som tolab navbatga yozildi')
+#         print(f'Navbatda: {mashina.navbat_mijozlar()} nafar haridor bor.')
 
 
-haridor1 = Haridor('Shokir')
-haridor2 = Haridor('Ali')
-avto1 = Avtomobil('Jentra')
-avto2 =Avtomobil('Cobalt')
-avtosalon1 = Avtosalon('Pitnak bozor')
-avtosalon1.add_avtomobil(avto1)
-avtosalon1.add_avtomobil(avto2)
-haridor1.avto_tanlash(avto1)
+# haridor1 = Haridor('Shokir')
+# haridor2 = Haridor('Ali')                                                                                    
+# avto1 = Avtomobil('Jentra' , 160000000)
+# avto2 =Avtomobil('Cobalt' , 150000000)                         
+# avtosalon1 = Avtosalon('Pitnak bozor')
+# avtosalon1.add_avtomobil(avto1)                                 
+# avtosalon1.add_avtomobil(avto2)                                      
+# haridor1.avto_tanlash(avto1)                         
+# haridor2.avto_tanlash(avto1)
+
+
+# class Ovqat:
+#     def __init__(self, ovqat_nomi, ovqat_narxi):
+#         self.ovqat_nomi = ovqat_nomi
+#         self.ovqat_narxi = ovqat_narxi
+#         self.mijozlar = []
+
+#     def add_mijoz(self, mijoz_ismi):
+#         self.mijozlar.append(mijoz_ismi)
+
+
+# class Restoran:
+#     def __init__(self, restoran_nomi):
+#         self.restoran_nomi = restoran_nomi
+#         self.ovqatlar = []
+
+#     def add_food(self, food_name):
+#         self.ovqatlar.append(food_name)
+
+
+# class Mijoz:
+#     def __init__(self, klient_name):
+#         self.klient_name = klient_name
+#         self.jami_summa = 0  
+#     def ovqat_tanlash(self, food, soni):
+#         food.add_mijoz(self.klient_name)
+#         narx = food.ovqat_narxi * soni
+#         self.jami_summa += narx 
+#         print(f"{self.klient_name} {soni}ta {food.ovqat_nomi} buyurtma qildi {narx} so'm")
+#     def jami_hisob(self):
+#         print(f"UMUMIY XISOB: {self.jami_summa}som")
+
+
+
+# mijoz1 = Mijoz('Ali')
+
+# ovqat1 = Ovqat('Shashlik', 16000)
+# ovqat2 = Ovqat('Suv', 15000)
+# ovqat3 = Ovqat('Salad', 55000)
+# ovqat4 = Ovqat('Sansebastian', 50000)
+# mijoz1.ovqat_tanlash(ovqat1, 4)
+# mijoz1.ovqat_tanlash(ovqat2, 2)
+# mijoz1.ovqat_tanlash(ovqat3, 2)
+# mijoz1.ovqat_tanlash(ovqat4, 1)
+
+# mijoz1.jami_hisob()
+
+
+
+
+class Yonalish:
+    def __init__(self , qayerdan , qayerga , bilet_narxi):
+        self.qayerdan = qayerdan
+        self.qayerga = qayerga
+        self.bilet_narxi = bilet_narxi
+        self.mijozlar = []
+    def add_yolovchi(self , mijoz_ismi):
+        self.mijozlar.append(mijoz_ismi)
+    def show_yonalish(self):
+        return f'{self.qayerdan}-{self.qayerga} {self.bilet_narxi}som\n{self.qayerdan}-{self.qayerga} {self.bilet_narxi}'
+
+class Poyezd:
+    def __init__(self , poezd_raqami):
+        self.poezd_raqami = poezd_raqami
+        self.yonalish = []
+    def yonalish_qoshish(self , qayerdan_qayerga):
+        self.yonalish.append(qayerdan_qayerga)
+
+class Yolovchi:
+    def  __init__(self , ismi , yoshi):
+        self.ismi = ismi
+        self.yoshi = yoshi
+    def yonalish_tanlash(self , yonalish):
+        if self.yoshi <=5:
+            print(f'{self.ismi}ning yoshi 5 dan kichik unga chipta bepul.')
+        else:
+            print(f'{self.ismi} {yonalish.qayerdan}-{yonalish.qayerga} yonalishiga {yonalish.bilet_narxi}som tolab chipta oldi.')
+
+
+yonalish1 = Yonalish('Toshkent', 'Xorazm' , 250000)
+yonalish2 = Yonalish('Urganch' , 'Buxoro' , 150000)
+poyezd1 = Poyezd('AC542 ')
+poyezd1.yonalish_qoshish(yonalish1)                                 
+poyezd1.yonalish_qoshish(yonalish2)    
+yolovchi1 = Yolovchi('Shokir' , 3)                              
+yolovchi1.yonalish_tanlash(yonalish1) 
+                     
